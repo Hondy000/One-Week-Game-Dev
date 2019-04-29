@@ -10,11 +10,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    /// <summary>
-    /// <brief> Use this for initialization.</brief>
-    ///
-    /// <remarks> Kazuyuki, 2019/01/06.</remarks>
-    /// </summary>
 
 	void Start () {
 		

@@ -171,9 +171,8 @@ public class KeyConfig
     /// </summary>
     public void LoadConfigFile()
     {
-        //TODO:復号処理
-        TextReader tr = new StreamReader(configFilePath, Encoding.UTF8);
-        // try
+        var fs = new FileStream(configFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+        TextReader tr = new StreamReader(fs, Encoding.UTF8);
         var str = tr.ReadToEnd();
         var pairs = JsonUtility.FromJson<Serialization<string, KeyData>>(str);
         config = pairs.ToDictionary();
